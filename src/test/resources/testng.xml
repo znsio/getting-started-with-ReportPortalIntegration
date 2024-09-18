@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="My suite" verbose="1" parallel="true"  allow-return-values="true">
-    <listeners>
-        <listener class-name="com.znsio.reportportal.integration.listener.ReportPortalListener"></listener>
-    </listeners>
+<!--    <listeners>-->
+<!--        <listener class-name="com.znsio.reportportal.integration.listener.ReportPortalListener"></listener>-->
+<!--    </listeners>-->
     <test name="My test 1" preserve-order="true">
         <classes>
             <class name="com.znsio.ReportPortalLogger.package1.Sample1_Test"/>
