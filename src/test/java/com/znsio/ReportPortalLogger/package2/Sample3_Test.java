@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class Sample3_Test  extends Hooks {
     @Test @Attributes(attributes = { @Attribute(key = "myattr", value = "sample1") })
-    public void sample1() {
+    public void sample3_1() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
         ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
@@ -20,8 +20,20 @@ public class Sample3_Test  extends Hooks {
         new MyUtils().myUtilsMethod2();
     }
 
+
+    @Test (description = "failingTest")
+    @Attributes(attributes = { @Attribute(key = "failingtest", value = "true") })
+    public void failingTest() {
+        ITestResult result = Reporter.getCurrentTestResult();
+        String methodName = result.getMethod().getMethodName();
+        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
+        new MyCore().myCoreMethod2();
+        throw new RuntimeException("Intentionally failing this test");
+    }
+
+
     @Test @Attributes(attributes = { @Attribute(key = "myattr", value = "sample2") })
-    public void sample2() {
+    public void sample3_3() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
         ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);

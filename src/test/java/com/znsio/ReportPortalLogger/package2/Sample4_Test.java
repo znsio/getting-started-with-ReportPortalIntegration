@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class Sample4_Test  extends Hooks {
     @Test (description = "my Sample4_Test_sample1 test")
     @Attributes(attributes = { @Attribute(key = "myattr", value = "sample2") }, multiValueAttributes = {@MultiValueAttribute(isNullKey = false, key = "components", values = {"v1", "v2", "v3" }) })
-    public void sample1() {
+    public void sample4_1() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
         ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
@@ -20,7 +20,7 @@ public class Sample4_Test  extends Hooks {
 
     @Test (description = "my Sample4_Test_sample2 test")
     @Attributes(multiValueAttributes = {@MultiValueAttribute(isNullKey = false, key = "components", values = {"v1", "v2", "v3" }) })
-    public void sample2() {
+    public void sample4_2() {
 
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();

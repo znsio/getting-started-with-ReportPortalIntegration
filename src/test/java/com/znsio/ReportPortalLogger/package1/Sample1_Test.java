@@ -11,9 +11,9 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class Sample1_Test extends Hooks {
-    @Test (description = "my sample1 test")
+    @Test (description = "my sample1_1 test")
     @Attributes(attributes = {@Attribute(key = "myattr", value = "sample1") })
-    public void sample1() {
+    public void sample1_1() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
         ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
@@ -21,9 +21,9 @@ public class Sample1_Test extends Hooks {
         new MyUtils().myUtilsMethod2();
     }
 
-    @Test (description = "my sample2 test")
+    @Test (description = "my sample1_2 test")
     @Attributes(attributes = { @Attribute(key = "myattr", value = "sample2") })
-    public void sample2() {
+    public void sample1_2() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
         ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
