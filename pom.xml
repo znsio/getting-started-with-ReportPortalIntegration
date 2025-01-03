@@ -89,6 +89,8 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFiles}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <reportFormat>html</reportFormat> <!-- Enable HTML output -->
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                     <properties>
                         <property>
                             <name>usedefaultlisteners</name>

@@ -3,6 +3,10 @@
 <!--    <listeners>-->
 <!--        <listener class-name="com.znsio.reportportal.integration.listener.ReportPortalListener"></listener>-->
 <!--    </listeners>-->
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+        <listener class-name="org.testng.reporters.TestHTMLReporter"/>
+    </listeners>
     <test name="My test 1" preserve-order="true">
         <classes>
             <class name="com.znsio.ReportPortalLogger.package1.Sample1_Test"/>
