@@ -15,15 +15,14 @@ public class Sample4_Test  extends Hooks {
     public void sample4_1() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + methodName);
     }
 
     @Test (description = "my Sample4_Test_sample2 test")
     @Attributes(multiValueAttributes = {@MultiValueAttribute(isNullKey = false, key = "components", values = {"v1", "v2", "v3" }) })
     public void sample4_2() {
-
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + methodName);
     }
 }

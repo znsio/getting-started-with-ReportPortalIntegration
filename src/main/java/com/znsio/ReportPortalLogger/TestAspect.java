@@ -1,5 +1,6 @@
 package com.znsio.ReportPortalLogger;
 
+import com.znsio.reportportal.integration.utils.ReportPortalLogger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -15,12 +16,12 @@ public class TestAspect {
     @Before(value = "testMethodExecution()")
     public void logBeforeTestMethod(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
-        System.out.println("logBeforeTestMethod: " + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\tTestAspect: logBeforeTestMethod: " + methodName);
     }
 
     @After(value = "testMethodExecution()")
     public void logAfterTestMethod(JoinPoint joinPoint) {
         String methodName = joinPoint.getSignature().getName();
-        System.out.println("logAfterTestMethod" + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\tTestAspect: logAfterTestMethod: " + methodName);
     }
 }

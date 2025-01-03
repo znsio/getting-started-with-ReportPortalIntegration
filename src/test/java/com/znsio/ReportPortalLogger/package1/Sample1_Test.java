@@ -16,7 +16,7 @@ public class Sample1_Test extends Hooks {
     public void sample1_1() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + methodName);
         new MyCore().myCoreMethod1();
         new MyUtils().myUtilsMethod2();
     }
@@ -26,7 +26,7 @@ public class Sample1_Test extends Hooks {
     public void sample1_2() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + methodName);
         new MyCore().myCoreMethod2();
         new MyUtils().myUtilsMethod1();
     }

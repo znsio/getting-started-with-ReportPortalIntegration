@@ -6,18 +6,18 @@ import org.testng.Reporter;
 
 public class MyCore {
     public void myCoreMethod1() {
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + getMethodName());
+        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + getMethodName());
         myCoreMethod2();
         myCoreMethod3();
     }
 
     public void myCoreMethod2() {
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + getMethodName());
+        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + getMethodName());
         myCoreMethod3();
     }
 
     private void myCoreMethod3() {
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + getMethodName());
+        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + getMethodName());
     }
 
 
