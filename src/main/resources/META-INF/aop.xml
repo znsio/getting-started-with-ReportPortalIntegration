@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aspectj>
+    <!-- Enable compile-time weaving -->
+    <weaver >
+        <!-- Include all aspects in your project -->
+        <include within="com.znsio.ReportPortalLogger.StepAspect" />
+        <include within="com.znsio.ReportPortalLogger.TestAspect" />
+    </weaver>
+
+    <!-- Declare the aspect libraries -->
+    <aspects>
+        <!-- StepAspect -->
+        <aspect name="com.znsio.ReportPortalLogger.StepAspect" />
+        <!-- TestAspect -->
+        <aspect name="com.znsio.ReportPortalLogger.TestAspect" />
+    </aspects>
+</aspectj>

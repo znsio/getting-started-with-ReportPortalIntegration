@@ -26,7 +26,7 @@ public class Sample3_Test  extends Hooks {
     public void failingTest() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
-        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\t\t" + this.getClass().getSimpleName() + " - " + methodName);
         new MyCore().myCoreMethod2();
         throw new RuntimeException("Intentionally failing this test");
     }
@@ -36,6 +36,6 @@ public class Sample3_Test  extends Hooks {
     public void sample3_3() {
         ITestResult result = Reporter.getCurrentTestResult();
         String methodName = result.getMethod().getMethodName();
-        ReportPortalLogger.logInfoMessage("\t\t\t->" + this.getClass().getSimpleName() + " - " + methodName);
+        ReportPortalLogger.logInfoMessage("\t\t\t\t" + this.getClass().getSimpleName() + " - " + methodName);
     }
 }

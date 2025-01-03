@@ -6,7 +6,7 @@ import org.testng.Reporter;
 
 public class MyUtils {
     public void myUtilsMethod1() {
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + getMethodName());
+        ReportPortalLogger.logInfoMessage("\t\t\t\t\t" + this.getClass().getSimpleName() + " - " + getMethodName());
         myUtilsMethod2();
         myUtilsMethod3();
     }
@@ -16,11 +16,11 @@ public class MyUtils {
     }
 
     public void myUtilsMethod2() {
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + getMethodName());
+        ReportPortalLogger.logInfoMessage("\t\t\t\t\t" + this.getClass().getSimpleName() + " - " + getMethodName());
         myUtilsMethod3();
     }
 
     private void myUtilsMethod3() {
-        ReportPortalLogger.logInfoMessage(this.getClass().getSimpleName() + " - " + getMethodName());
+        ReportPortalLogger.logInfoMessage("\t\t\t\t\t" + this.getClass().getSimpleName() + " - " + getMethodName());
     }
 }

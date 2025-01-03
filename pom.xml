@@ -56,6 +56,11 @@
             <artifactId>aspectjtools</artifactId>
             <version>1.9.19</version>
         </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.19</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -77,9 +82,10 @@
                     <forkCount>1</forkCount>
                     <reuseForks>true</reuseForks>
                     <argLine>-Dtestng.dtd.http=true</argLine>
-                    <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                    </argLine>
+                    <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
+                    <systemPropertyVariables>
+                        <ajc.lint.adviceDidNotMatch>warning</ajc.lint.adviceDidNotMatch>
+                    </systemPropertyVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFiles}</suiteXmlFile>
                     </suiteXmlFiles>
