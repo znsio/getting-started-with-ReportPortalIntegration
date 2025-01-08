@@ -33,7 +33,7 @@
         <dependency>
             <groupId>com.github.znsio</groupId>
             <artifactId>ReportPortalIntegration</artifactId>
-            <version>0.0.10</version>
+            <version>0.0.11</version>
         </dependency>
         <dependency>
             <groupId>com.epam.reportportal</groupId>
@@ -119,9 +119,9 @@
                     <complianceLevel>1.8</complianceLevel>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <verbose>true</verbose>
+                    <verbose>false</verbose>
                     <encoding>UTF-8</encoding>
-                    <showWeaveInfo>true</showWeaveInfo>
+                    <showWeaveInfo>false</showWeaveInfo>
                     <aspectLibraries>
                         <aspectLibrary>
                             <groupId>org.aspectj</groupId>
