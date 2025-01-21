@@ -4,8 +4,10 @@ import com.znsio.reportportal.integration.listener.ReportPortalListener;
 import com.znsio.reportportal.integration.listener.SkipOnFailureListener;
 import com.znsio.reportportal.integration.utils.ReportPortalLogger;
 import org.testng.annotations.*;
+import org.testng.reporters.EmailableReporter2;
+import org.testng.reporters.TestHTMLReporter;
 
-@Listeners({ReportPortalListener.class, SkipOnFailureListener.class})
+@Listeners({ReportPortalListener.class, SkipOnFailureListener.class, EmailableReporter2.class, TestHTMLReporter.class})
 public class Hooks {
     @BeforeSuite
     public void beforeSuite() {
